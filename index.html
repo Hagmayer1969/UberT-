@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBERTUR - Turismo em Florianópolis</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div id="home" class="screen home-bg">
+            <h1>🌴 UBERTUR</h1>
+            <p class="center">Descubra as maravilhas de <strong>Florianópolis</strong>!</p>
+            <p class="center">Roteiros personalizados pela Ilha da Magia</p>
+            <button class="btn btn-primary" onclick="showRoteiros()">
+                <span class="icon">🗺️</span>Ver Roteiros Disponíveis
+            </button>
+            <button class="btn btn-secondary" onclick="showSobre()">
+                <span class="icon">ℹ️</span>Sobre o UBERTUR
+            </button>
+        </div>
+
+        <!-- Tela Sobre -->
+        <div id="sobre" class="screen hidden home-bg">
+            <h2>Sobre o UBERTUR</h2>
+            <p>UBERTUR: Seu motorista particular para os melhores roteiros de Floripa.**
+
+Venha fazer parte parte desta experiência turística em Florianópolis. Nosso objetivo é conectar você e sua familia aos principais pontos turísticos da ilha, oferecendo transporte seguro e confortável com a flexibilidade que pacotes turísticos tradicionais não permitem..</p>
+            <p><strong>Por que escolher o UBERTUR?</strong></p>
+            <ul style="text-align: left; padding-left: 20px;">
+                <li>Sugestão de Roteiros:Apresentamos os melhores circuitos (Norte, Sul, Leste e Centro) para você escolher.</li>
+                <li>Translado Confortável:Cuidamos do seu transporte com pontualidade e segurança</li>
+                <li>Liberdade para Explorar:** Deixamos você nos pontos turísticos para que aproveite seu tempo como quiser, sem a rigidez de um tour em grupo.</li>
+                <li>Preços acessíveis e transparentes</li>
+            </ul>
+            <button class="btn btn-primary" onclick="showHome()">
+                <span class="icon">🏠</span>Voltar ao Início
+            </button>
+        </div>
+
+        <!-- Tela de Roteiros -->
+        <div id="roteiros" class="screen hidden roteiros-bg">
+            <h2>🗺️ Roteiros Disponíveis</h2>
+            
+            <div class="roteiro-card" onclick="showDetalhes('norte1')">
+                <div class="card-image tour-norte1-card"></div>
+                <div class="roteiro-info">
+                    <h3><span class="beach-icon icon"></span>Tour Norte 1</h3>
+                    <p>Descubra as praias familiares do norte com infraestrutura completa e águas calmas.</p>
+                    <div class="locais-text">
+                        📍 Praia dos Ingleses • Praia do Santinho • Praia de Canasvieiras
+                    </div>
+                </div>
+            </div>
+
+            <div class="roteiro-card" onclick="showDetalhes('norte2')">
+                <div class="card-image tour-norte2-card"></div>
+                <div class="roteiro-info">
+                    <h3><span class="beach-icon icon"></span>Tour Norte 2</h3>
+                    <p>Explore praias mais selvagens e preservadas do extremo norte da ilha.</p>
+                    <div class="locais-text">
+                        📍 Praia de Lagoinha do Norte • Ponta das Canas • Praia Brava
+                    </div>
+                </div>
+            </div>
+
+            <div class="roteiro-card" onclick="showDetalhes('norte3')">
+                <div class="card-image tour-norte3-card"></div>
+                <div class="roteiro-info">
+                    <h3><span class="beach-icon icon"></span>Tour Norte 3</h3>
+                    <p>Conheça o luxo de Jurerê e a história de Santo Antônio de Lisboa.</p>
+                    <div class="locais-text">
+                        📍 Jurerê Internacional • Praia de Canajurê • Praia do Forte • Santo Antônio de Lisboa
+                    </div>
+                </div>
+            </div>
+
+            <div class="roteiro-card" onclick="showDetalhes('leste1')">
+                <div class="card-image tour-leste1-card"></div>
+                <div class="roteiro-info">
+                    <h3><span class="lagoon-icon icon"></span>Tour Leste 1</h3>
+                    <p>Viva a energia do surf e a beleza da Lagoa da Conceição.</p>
+                    <div class="locais-text">
+                        📍 Praia da Joaquina • Praia Mole • Lagoa da Conceição
+                    </div>
+                </div>
+            </div>
+
+            <div class="roteiro-card" onclick="showDetalhes('leste2')">
+                <div class="card-image tour-leste2-card"></div>
+                <div class="roteiro-info">
+                    <h3><span class="lagoon-icon icon"></span>Tour Leste 2</h3>
+                    <p>Descubra praias selvagens e a tranquilidade da Costa da Lagoa.</p>
+                    <div class="locais-text">
+                        📍 Barra da Lagoa • Praia do Moçambique • Costa da Lagoa
+                    </div>
+                </div>
+            </div>
+
+            <div class="roteiro-card" onclick="showDetalhes('sul')">
+                <div class="card-image tour-sul-card"></div>
+                <div class="roteiro-info">
+                    <h3><span class="beach-icon icon"></span>Tour Sul</h3>
+                    <p>Explore as praias paradisíacas do sul com a famosa Ilha do Campeche.</p>
+                    <div class="locais-text">
+                        📍 Praia do Campeche • Ilha do Campeche • Morro das Pedras • Pantano do Sul • Armação
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" onclick="showHome()">
+                <span class="icon">🏠</span>Voltar ao Início
+            </button>
+        </div>
+
+        <!-- Tela de Detalhes -->
+        <div id="detalhes" class="screen hidden detalhes-bg">
+            <div id="detalhes-content"></div>
+            <button class="btn btn-primary" onclick="showConfirmacao()">
+                <span class="icon">📅</span>Reservar Este Roteiro
+            </button>
+            <button class="btn btn-secondary" onclick="showRoteiros()">
+                <span class="icon">⬅️</span>Voltar aos Roteiros
+            </button>
+        </div>
+
+        <!-- Tela de Confirmação -->
+        <div id="confirmacao" class="screen hidden confirmacao-bg">
+            <h2><span class="check-icon icon"></span>Reserva Confirmada!</h2>
+            <div class="confirmation-details">
+                <div><strong>🗓️ Data:</strong> Próximo sábado, 15/12</div>
+                <div><strong>⏰ Horário:</strong> 09:00 - 17:00</div>
+                <div><strong>👥 Participantes:</strong> 2 pessoas</div>
+                <div><strong>💰 Valor Total:</strong> R$ 280,00</div>
+                <div><strong>📱 Contato do Guia:</strong> (48) 99999-9999</div>
+            </div>
+            <p class="center">Você receberá um SMS com todos os detalhes da sua reserva!</p>
+            <p class="center"><strong>Prepare-se para uma experiência inesquecível em Florianópolis! 🌴</strong></p>
+            <button class="btn btn-primary" onclick="showHome()">
+                <span class="icon">🏠</span>Nova Reserva
+            </button>
+        </div>
+    </div>
+
+     <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96aabe08961ee841',t:'MTc1NDQ0MzU0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

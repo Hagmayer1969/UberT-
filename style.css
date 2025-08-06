@@ -1,0 +1,252 @@
+
+        /* Reset e Configurações Gerais */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0; 
+            color: #333;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        .container { 
+            max-width: 420px; 
+            margin: 30px auto; 
+            padding: 0 10px;
+        }
+
+        .screen {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Backgrounds específicos para cada tela */
+        .home-bg {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2387CEEB;stop-opacity:1" /><stop offset="100%" style="stop-color:%23E0F6FF;stop-opacity:1" /></linearGradient></defs><rect width="800" height="400" fill="url(%23sky)"/><ellipse cx="400" cy="500" rx="400" ry="100" fill="%2300BFFF"/><path d="M0,450 Q200,400 400,450 T800,450 L800,600 L0,600 Z" fill="%23F5DEB3"/><circle cx="150" cy="350" r="80" fill="%2332CD32"/><circle cx="650" cy="320" r="60" fill="%2332CD32"/><rect x="300" y="380" width="200" height="120" fill="%23D2691E"/><polygon points="300,380 400,320 500,380" fill="%23B22222"/></svg>') center/cover;
+        }
+
+        .roteiros-bg {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="ocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2300CED1;stop-opacity:1" /><stop offset="100%" style="stop-color:%23008B8B;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(%23ocean)"/><path d="M0,400 Q200,350 400,400 T800,400 L800,600 L0,600 Z" fill="%23F5DEB3"/><circle cx="100" cy="100" r="40" fill="%23FFD700"/><path d="M50,450 Q150,420 250,450 Q350,480 450,450 Q550,420 650,450 Q750,480 800,450 L800,600 L0,600 Z" fill="%23FFFFFF" opacity="0.3"/></svg>') center/cover;
+        }
+
+        .detalhes-bg {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="%2387CEEB"/><path d="M0,500 Q400,450 800,500 L800,600 L0,600 Z" fill="%2300BFFF"/><path d="M0,520 Q400,470 800,520 L800,600 L0,600 Z" fill="%23FFFFFF" opacity="0.5"/><circle cx="200" cy="200" r="100" fill="%2332CD32"/><circle cx="600" cy="150" r="80" fill="%2332CD32"/><rect x="350" y="250" width="100" height="80" fill="%23D2691E"/><polygon points="350,250 400,200 450,250" fill="%23B22222"/></svg>') center/cover;
+        }
+
+        .confirmacao-bg {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="sunset" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23FF6B6B;stop-opacity:1" /><stop offset="50%" style="stop-color:%23FFE66D;stop-opacity:1" /><stop offset="100%" style="stop-color:%23FF8E53;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(%23sunset)"/><circle cx="150" cy="150" r="60" fill="%23FFD700"/><path d="M0,400 Q400,350 800,400 L800,600 L0,600 Z" fill="%2300BFFF"/><path d="M0,450 Q400,400 800,450 L800,600 L0,600 Z" fill="%23F5DEB3"/></svg>') center/cover;
+        }
+
+        /* Estilos de Títulos e Textos */
+        h1, h2, h3 { 
+            color: #0d47a1;
+            text-align: center;
+            margin-top: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            font-size: 32px; 
+            background: linear-gradient(45deg, #0d47a1, #1976d2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h2 { font-size: 24px; margin-bottom: 20px; }
+        p { line-height: 1.6; font-size: 16px; }
+        .center { text-align: center; }
+        .bold { font-weight: bold; }
+        .hidden { display: none; }
+
+        /* Estilo dos Botões */
+        .btn { 
+            display: block;
+            width: 100%; 
+            margin: 10px 0; 
+            padding: 16px; 
+            border: none; 
+            border-radius: 12px; 
+            font-size: 16px; 
+            font-weight: bold;
+            cursor: pointer; 
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary { 
+            background: linear-gradient(45deg, #1976d2, #42a5f5);
+            color: #fff; 
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #1565c0, #1e88e5);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            color: #1976d2;
+            border: 2px solid #1976d2;
+        }
+
+        .btn-secondary:hover { 
+            background: linear-gradient(45deg, #bbdefb, #90caf9);
+            transform: translateY(-2px);
+        }
+
+        /* Estilo dos Cards de Roteiro */
+        .roteiro-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .roteiro-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .roteiro-card .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.3));
+        }
+
+        /* Imagens realistas de praias */
+        .tour-norte1-card { 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><radialGradient id="sun" cx="50%" cy="30%" r="15%"><stop offset="0%" style="stop-color:%23FFD700;stop-opacity:1" /><stop offset="100%" style="stop-color:%23FFA500;stop-opacity:0.8" /></radialGradient><linearGradient id="ocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2300BFFF;stop-opacity:1" /><stop offset="70%" style="stop-color:%230080FF;stop-opacity:1" /><stop offset="100%" style="stop-color:%23006BB3;stop-opacity:1" /></linearGradient></defs><rect width="400" height="200" fill="url(%23ocean)"/><ellipse cx="350" cy="60" rx="25" ry="25" fill="url(%23sun)"/><path d="M0,140 Q100,120 200,140 Q300,160 400,140 L400,200 L0,200 Z" fill="%23F4E4BC"/><path d="M0,160 Q100,145 200,160 Q300,175 400,160 L400,200 L0,200 Z" fill="%23E6D3A3"/><ellipse cx="80" cy="170" rx="15" ry="8" fill="%23D4C4A8"/><ellipse cx="320" cy="175" rx="12" ry="6" fill="%23D4C4A8"/><path d="M50,150 Q150,135 250,150 Q350,165 400,150" stroke="%23FFFFFF" stroke-width="2" fill="none" opacity="0.7"/></svg>') center/cover;
+        }
+
+        .tour-norte2-card { 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><linearGradient id="deepocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2320B2AA;stop-opacity:1" /><stop offset="100%" style="stop-color:%23008B8B;stop-opacity:1" /></linearGradient></defs><rect width="400" height="200" fill="url(%23deepocean)"/><circle cx="100" cy="50" r="20" fill="%23FFD700" opacity="0.9"/><path d="M0,130 Q200,110 400,130 L400,200 L0,200 Z" fill="%23F5DEB3"/><circle cx="150" cy="40" r="30" fill="%2332CD32" opacity="0.8"/><circle cx="250" cy="35" r="25" fill="%2332CD32" opacity="0.8"/><path d="M0,150 Q200,130 400,150 L400,200 L0,200 Z" fill="%23DEB887" opacity="0.7"/><path d="M100,140 Q200,125 300,140 Q350,150 400,140" stroke="%23FFFFFF" stroke-width="3" fill="none" opacity="0.8"/></svg>') center/cover;
+        }
+
+        .tour-norte3-card { 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><linearGradient id="luxocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2340E0D0;stop-opacity:1" /><stop offset="100%" style="stop-color:%2300CED1;stop-opacity:1" /></linearGradient></defs><rect width="400" height="200" fill="url(%23luxocean)"/><circle cx="350" cy="40" r="18" fill="%23FFD700"/><path d="M0,120 Q200,100 400,120 L400,200 L0,200 Z" fill="%23F0E68C"/><rect x="300" y="130" width="40" height="30" fill="%23D2691E"/><polygon points="300,130 320,110 340,130" fill="%23B22222"/><rect x="50" y="140" width="25" height="20" fill="%23CD853F"/><polygon points="50,140 62,125 75,140" fill="%23A0522D"/><path d="M0,140 Q200,120 400,140 L400,200 L0,200 Z" fill="%23FFFACD" opacity="0.6"/></svg>') center/cover;
+        }
+
+        .tour-leste1-card { 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><linearGradient id="surfocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%234169E1;stop-opacity:1" /><stop offset="100%" style="stop-color:%23191970;stop-opacity:1" /></linearGradient></defs><rect width="400" height="200" fill="url(%23surfocean)"/><ellipse cx="120" cy="50" rx="35" ry="35" fill="%23FFD700" opacity="0.9"/><path d="M0,110 Q100,90 200,110 Q300,130 400,110 L400,200 L0,200 Z" fill="%23DEB887"/><ellipse cx="200" cy="80" rx="80" ry="30" fill="%2300CED1" opacity="0.7"/><path d="M50,120 Q150,100 250,120 Q350,140 400,120" stroke="%23FFFFFF" stroke-width="4" fill="none" opacity="0.9"/><path d="M0,130 Q100,110 200,130 Q300,150 400,130" stroke="%23FFFFFF" stroke-width="2" fill="none" opacity="0.6"/></svg>') center/cover;
+        }
+
+        .tour-leste2-card { 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><linearGradient id="wildocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23008080;stop-opacity:1" /><stop offset="100%" style="stop-color:%23006666;stop-opacity:1" /></linearGradient></defs><rect width="400" height="200" fill="url(%23wildocean)"/><circle cx="80" cy="60" r="22" fill="%23FFD700" opacity="0.8"/><circle cx="120" cy="80" r="40" fill="%2332CD32" opacity="0.7"/><circle cx="280" cy="70" r="35" fill="%2332CD32" opacity="0.7"/><path d="M0,125 Q200,105 400,125 L400,200 L0,200 Z" fill="%23D2B48C"/><path d="M100,135 Q200,115 300,135 Q350,145 400,135" stroke="%23FFFFFF" stroke-width="3" fill="none" opacity="0.8"/></svg>') center/cover;
+        }
+
+        .tour-sul-card { 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><defs><linearGradient id="southocean" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23483D8B;stop-opacity:1" /><stop offset="100%" style="stop-color:%232F4F4F;stop-opacity:1" /></linearGradient></defs><rect width="400" height="200" fill="url(%23southocean)"/><circle cx="300" cy="45" r="20" fill="%23FFD700" opacity="0.9"/><ellipse cx="150" cy="120" rx="60" ry="20" fill="%23228B22" opacity="0.8"/><path d="M0,135 Q200,115 400,135 L400,200 L0,200 Z" fill="%23F4A460"/><circle cx="200" cy="90" r="15" fill="%23696969"/><circle cx="250" cy="95" r="12" fill="%23696969"/><path d="M80,145 Q180,125 280,145 Q340,155 400,145" stroke="%23FFFFFF" stroke-width="2" fill="none" opacity="0.7"/></svg>') center/cover;
+        }
+
+        .roteiro-info { padding: 20px; }
+        .roteiro-info h3 { 
+            margin-top: 0; 
+            margin-bottom: 12px; 
+            color: #0d47a1;
+            font-size: 20px;
+        }
+        .roteiro-info p { 
+            font-size: 14px; 
+            margin-bottom: 15px; 
+            color: #555;
+        }
+        .locais-text { 
+            font-size: 13px; 
+            color: #666; 
+            font-style: italic; 
+            background: rgba(25, 118, 210, 0.1);
+            padding: 8px;
+            border-radius: 8px;
+            border-left: 4px solid #1976d2;
+        }
+
+        /* Tela de Confirmação e Diálogo */
+        .confirmation-details {
+            background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1));
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid rgba(25, 118, 210, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .confirmation-details div { 
+            margin-bottom: 12px; 
+            font-size: 16px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .screen {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Ícones decorativos */
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .beach-icon::before { content: '🏖️'; }
+        .city-icon::before { content: '🏛️'; }
+        .lagoon-icon::before { content: '🌊'; }
+        .check-icon::before { content: '✅'; }
+  
